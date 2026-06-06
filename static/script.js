@@ -1,4 +1,4 @@
-function showMessage() {
+function showText() {
     document.getElementById("message").innerHTML =
-        "Fetching weather data...";
+        "Predicting weather...";
 }
