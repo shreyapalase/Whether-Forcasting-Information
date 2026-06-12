@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Weather Prediction</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <div class="container">
-    <h1>Simple Weather Prediction</h1>
+    <h1>Weather Forecast</h1>
 
-    <form method="POST">
-        <input
-            type="number"
-            name="temperature"
-            id="temperature"
-            placeholder="Enter Temperature"
-            required
-        >
+    <input type="text" id="city" placeholder="Enter City">
+    <button onclick="getWeather()">Search</button>
 
-        <button type="submit" onclick="showText()">
-            Predict
-        </button>
-    </form>
-
-    <p id="message"></p>
-
-    {% if result %}
-        <h2>{{ result }}</h2>
-    {% endif %}
+    <div id="weather"></div>
 </div>
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
